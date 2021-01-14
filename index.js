@@ -86,7 +86,7 @@ app.post("/responder", (req, res) =>{
     });
 });
 
-app.post("/excluir", (req, res) =>{
+app.post("/excluirpergunta", (req, res) =>{
     var perguntaId = req.body.pergunta;
 
     Pergunta.destroy({
@@ -104,6 +104,17 @@ app.post("/excluir", (req, res) =>{
     })
 });
 
+app.post("/excluirresposta", (req, res) =>{
+    var id = req.body.id;
+    var perguntaId = req.body.perguntaId;
+    Resposta.destroy({
+        where: {
+            id
+        }
+    }).then(() => {
+        res.redirect("/pergunta/"+perguntaId);
+    })
+});
 //- rotas
 
 

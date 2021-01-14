@@ -20,9 +20,14 @@
         <% respostas.forEach(resposta => {%>
             <div class="card mb-3">
                 <div class="card-body">
-                    <p>
+                    <p class="btnExcluir">
                         <%= resposta.corpo %> 
                     </p>
+                    <form action="/excluirresposta" method="post" class="btnExcluir">
+                        <input type="hidden" value="<%= resposta.id %>" name="id">
+                        <input type="hidden" value="<%= resposta.perguntaId %>" name="perguntaId">
+                        <button class="btn btn-danger float-right">Excluir</button>
+                    </form>
                 </div>
             </div>
         <% }) %>
