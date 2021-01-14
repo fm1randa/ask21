@@ -9,3 +9,7 @@ body{
 .btnExcluir{
     display: inline;
 }
+
+.btnPerguntar{
+    color: white !important; 
+}
