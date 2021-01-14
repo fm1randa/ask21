@@ -14,6 +14,10 @@
                 </div>
                 <div class="card-footer">
                     <a href="/pergunta/<%= pergunta.id %>" class="btn btn-primary">Responder</a>
+                    <form action="POST" class="btnExcluir">
+                        <a href="/pergunta/<%= pergunta.id %>" class="btn btn-danger">Excluir</a>
+                    </form>
+                    
                 </div>
             </div>                   
         <%}) %> 

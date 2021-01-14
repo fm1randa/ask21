@@ -5,3 +5,7 @@ body{
 #formulario-pergunta{
     margin-top: 5vh; /* vh = altura da tela */
 }
+
+.btnExcluir{
+    display: inline;
+}
