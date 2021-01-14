@@ -14,8 +14,9 @@
                 </div>
                 <div class="card-footer">
                     <a href="/pergunta/<%= pergunta.id %>" class="btn btn-primary">Responder</a>
-                    <form action="POST" class="btnExcluir">
-                        <a href="/pergunta/<%= pergunta.id %>" class="btn btn-danger">Excluir</a>
+                    <form method="POST" class="btnExcluir" action="/excluir">
+                        <input type="hidden" value="<%= pergunta.id %>" name="pergunta">
+                        <button class="btn btn-danger">Excluir</button>
                     </form>
                     
                 </div>

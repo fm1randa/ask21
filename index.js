@@ -86,6 +86,24 @@ app.post("/responder", (req, res) =>{
     });
 });
 
+app.post("/excluir", (req, res) =>{
+    var perguntaId = req.body.pergunta;
+
+    Pergunta.destroy({
+        where: {
+            id: perguntaId
+        }
+    });
+
+    Resposta.destroy({
+        where: {
+            perguntaId
+        }
+    }).then(() => {
+        res.redirect("/");
+    })
+});
+
 //- rotas
 
 
